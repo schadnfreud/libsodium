@@ -44,6 +44,14 @@ SODIUM_EXPORT
 int crypto_scalarmult_ed25519_base_noclamp(unsigned char *q, const unsigned char *n)
             __attribute__ ((nonnull));
 
+SODIUM_EXPORT
+int crypto_blind_ed25519_secret_key(unsigned char *out, const unsigned char *inp,
+	const unsigned char *param);
+
+SODIUM_EXPORT
+int crypto_blind_ed25519_public_key(unsigned char *out, const unsigned char *inp,
+	const unsigned char *param);
+
 #ifdef __cplusplus
 }
 #endif
